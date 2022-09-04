@@ -7,15 +7,15 @@ import java.util.List;
 import java.util.Random;
 
 public class CarDaoImpl implements CarDao{
-    private static String[] models = {"Women1", "Women2", "Women3", "Women4", "Women5", "Women6", "Women7", "Women8"};
-    private static String[] transmissions = {"ChexolBigWall", "ChexolSmallWall", "ChexolDeep"};
+    private static String[] models = {"Mercedes", "BMW", "Mazda", "KIA", "Toyota"};
+    private static String[] transmissions = {"transmission1", "transmission2", "transmission3"};
 
     private static List<Car> cars = new ArrayList<>();
     static {
         Random random = new Random();
         for (int i = 0; i < 5; i++) {
             Car car = new Car();
-            car.setModel(models[random.nextInt(8)]);
+            car.setModel(models[random.nextInt(5)]);
             car.setTransmission(transmissions[random.nextInt(3)]);
             car.setEngineOutput(random.nextInt(150));
             cars.add(car);
