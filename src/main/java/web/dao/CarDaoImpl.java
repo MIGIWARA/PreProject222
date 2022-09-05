@@ -1,11 +1,12 @@
 package web.dao;
 
+import org.springframework.stereotype.Component;
 import web.model.Car;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
-
+@Component
 public class CarDaoImpl implements CarDao{
     private static String[] models = {"Mercedes", "BMW", "Mazda", "KIA", "Toyota"};
     private static String[] transmissions = {"transmission1", "transmission2", "transmission3"};

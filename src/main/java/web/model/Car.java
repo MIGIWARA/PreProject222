@@ -2,6 +2,7 @@ package web.model;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 import java.util.Random;
 
 public class Car {
@@ -9,6 +10,7 @@ public class Car {
     private String model;
     private String transmission;
     private int engineOutput;
+
     public Car() {
 
 
@@ -42,5 +44,18 @@ public class Car {
     @Override
     public String toString() {
         return "model -> " + model + " transmission -> " + transmission + " engineOutput -> " + engineOutput;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Car car = (Car) o;
+        return engineOutput == car.engineOutput && Objects.equals(model, car.model) && Objects.equals(transmission, car.transmission);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(model, transmission, engineOutput);
     }
 }
