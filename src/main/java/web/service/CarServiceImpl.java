@@ -9,16 +9,16 @@ import java.util.List;
 
 @Component
 public class CarServiceImpl implements CarService {
-    CarDaoImpl carDao;
+    CarDaoImpl carDaoImpl;
     @Autowired
     public CarServiceImpl(CarDaoImpl carDao) {
-        this.carDao = carDao;
+        this.carDaoImpl = carDao;
     }
 
     @Override
     public List<Car> getCarList(int count) {
         System.out.println("Done");
         count = count < 5 && count > 0 ? count : 5;
-        return carDao.getCarList(count);
+        return carDaoImpl.getCarList(count);
     }
 }
