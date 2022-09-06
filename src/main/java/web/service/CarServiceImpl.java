@@ -9,7 +9,8 @@ import java.util.List;
 
 @Component
 public class CarServiceImpl implements CarService {
-    CarDaoImpl carDaoImpl;
+    private CarDaoImpl carDaoImpl;
+
     @Autowired
     public CarServiceImpl(CarDaoImpl carDao) {
         this.carDaoImpl = carDao;

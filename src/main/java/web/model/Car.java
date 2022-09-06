@@ -1,9 +1,7 @@
 package web.model;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Objects;
-import java.util.Random;
+
 
 public class Car {
 
@@ -12,8 +10,6 @@ public class Car {
     private int engineOutput;
 
     public Car() {
-
-
     }
 
 
